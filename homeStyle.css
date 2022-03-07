@@ -1,0 +1,122 @@
+/** Structure de la page**/
+
+body {
+    display: flex;
+    background-color: rgb(42, 40, 40);
+    align-items: end;
+    margin: 0px;
+}
+
+.row-span2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.row-span {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.col-sapn {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    width: fit-content;
+    min-height: 100vh;
+    background-color: rgb(29, 29, 29);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    min-width: 85vw;
+    align-items: center;
+}
+
+
+/** autre **/
+h1 {
+    align-items: center;
+    color: rgb(255, 0, 0);
+}
+
+h2 {
+    align-items: center;
+    color: rgb(0, 102, 255);
+}
+
+
+/** Bouton avec flou pour chaque projet **/
+.bt {
+    width: 32%;
+    height: auto;
+    padding: 1%;
+}
+
+
+.des {
+    color: red;
+    width: fit-content;
+    position: relative;
+    top: -25px;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.bt:hover img{
+    margin: 0px;
+    border: 0px;
+    filter: blur(8px);
+}
+
+.bt:hover .des {
+    transition: 0.5s;
+    transform: translateY(-7vh);
+    opacity: 1;
+}
+
+
+section img {
+    width: 100%;
+}
+
+.bt p:hover {
+    cursor: pointer;
+}
+
+.bt p {
+    padding-left: 10px;
+}
+
+/** Bouton pour afficher le menu **/
+
+input[type="checkbox"]:not(:checked) ~ ul{
+    transition: 0.5s;
+    transform: scaleX(0);
+    width: 0;
+    
+
+}
+input[type="checkbox"]:checked ~ ul{
+    transition: 0.5s;
+    transform: scaleX(100%);
+    padding-right: 10px;
+}
+
+
+
+/** Menu **/
+nav li {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li:hover {
+    color:rgb(255, 0, 0);
+}
