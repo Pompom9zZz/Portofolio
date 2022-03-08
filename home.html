@@ -6,62 +6,231 @@
     <link href="./homeStyle.css" rel="stylesheet">
     <title>Document</title>
 </head>
+<script language="javascript" type="text/javascript">
+    function changeWidth() {
+        let menu = document.querySelector("nav");
+        let width = menu.offsetWidth;
+        let page = document.querySelector("html");
+        let w = page.offsetWidth;
+        var body = document.getElementById('trueBody');
+        body.style.width = (w - width).toString;
+        console.log(w - width);
+    }
+</script>
 
 <body>
     <div class="row-span">
-
         <div class="col-span">
-            <header>
-                <h1>Mon portofolio</h1>
-                <h2>BUT INFO</h2>
-                <h2>Tom Fourcaudot</h2>
-            </header>
-            <section>
-                <div class="row-span2">
-                    <div class="bt">
-                        <a href="harold.png">
-                            <img src="harold.png" alt="testButton">
-                        </a>
-                        <p class="des">Mon projet</p>
-                    </div>
-                    <div class="bt">
-                        <a href="harold.png">
-                            <img src="harold.png" alt="testButton">
-                        </a>
-                        <p class="des">Mon projet</p>
-                    </div>
-                    <div class="bt">
-                        <a href="harold.png">
-                            <img src="harold.png" alt="testButton">
-                        </a>
-                        <p class="des">Mon projet</p>
-                    </div>
+            <!-- Menu sur le coté-->
+            <nav>
+                <div class="menuBt">
+                    <form>
+                        <div class="menu-row-span">
+                            <input type="checkbox" value="checked" onclick="changeWidth()">
+                            <span></span>
+                            <div class="icon-col-span">
+                                <h3>Menu</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#annee1">
+                                        Projets de première année
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <br>
+                                    </li>
+                                    <li>
+                                        <a href="#annee2">
+                                        Projets de deuxième année
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <br>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                        Projets de troisième année
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <br>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                        Projets personnels
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <br>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </section>
-        </div>
-        <nav>
-            <div class="menuBt">
-                <form>
-                    <div class="menu-row-span">
-                        <input type="checkbox" value="checked">
-                        <span></span>
-                        <div class="icon-col-span">
-                            <h3>Menu</h3>
-                            <ul>
-                                <a href="https://google.com">
-                                    <li>Projets de première année</li>
-                                </a>
-                                <br>
+            </nav>
+            <!-- En tete-->
+            <section id="trueBody">
+                <header>
+                    <h1>Mon portofolio</h1>
+                    <h2>BUT INFO</h2>
+                    <h2>Tom Fourcaudot</h2>
+                </header>
+                <!--Corps de la page-->
+                <!-- Une année-->
+                <section id="annee1">
+                    <div class="sectionTitle">
+                        <h1>Projets de première année</h1>
+                    </div>
+                    <div class="blockDeTrois">
+                        <div class="row-span2">
+                            <div class="bt">
                                 <a href="#">
-                                    <li>Projets de deuxième année</li>
+                                    <img src="IMG/lowatem.png" alt="testButton">
                                 </a>
-                                <br>
-                            </ul>
+                                <span class="des">
+                        <p>Lowatem</p>
+                        <p>Algo Prog</p>
+                        <p>Java</p>
+                        </span>
+                            </div>
+                            <div class="bt">
+                                <a href="#">
+                                    <img src="IMG/pong.png" alt="testButton">
+                                </a>
+                                <span class="des">
+                            <p>Pong</p>
+                            <p>Algo Prog</p>
+                            <p>Processing</p>
+                            </span>
+                            </div>
+                            <div class="bt">
+                                <a href="#">
+                                    <img src="IMG/machineVirtuelle.png" alt="testButton">
+                                </a>
+                                <span class="des">
+                            <p>Création machine virtuelle</p>
+                            <p>Système</p>
+                            <p>Linux / Bash</p>
+                            </span>
+                            </div>
                         </div>
                     </div>
-                </form>
-            </div>
-        </nav>
+                    <div class="blockDeTrois">
+                        <div class="row-span2">
+                            <div class="bt">
+                                <a href="#">
+                                    <img src="IMG/lowatem.png" alt="testButton">
+                                </a>
+                                <span class="des">
+                        <p>Lowatem</p>
+                        <p>Algo Prog</p>
+                        <p>Java</p>
+                        </span>
+                            </div>
+                            <div class="bt">
+                                <a href="#">
+                                    <img src="IMG/pong.png" alt="testButton">
+                                </a>
+                                <span class="des">
+                            <p>Pong</p>
+                            <p>Algo Prog</p>
+                            <p>Processing</p>
+                            </span>
+                            </div>
+                            <div class="bt">
+                                <a href="#">
+                                    <img src="IMG/machineVirtuelle.png" alt="testButton">
+                                </a>
+                                <span class="des">
+                            <p>Création machine virtuelle</p>
+                            <p>Système</p>
+                            <p>Linux / Bash</p>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <!--Fin d'une année-->
+                <!-- Une année-->
+                <section id="annee2">
+                    <div class="sectionTitle">
+                        <h1>Projets de deuxième année</h1>
+                    </div>
+                    <div class="blockDeTrois">
+                        <div class="row-span2">
+                            <div class="bt">
+                                <a href="#">
+                                    <img src="IMG/lowatem.png" alt="testButton">
+                                </a>
+                                <span class="des">
+                        <p>Lowatem</p>
+                        <p>Algo Prog</p>
+                        <p>Java</p>
+                        </span>
+                            </div>
+                            <div class="bt">
+                                <a href="#">
+                                    <img src="IMG/pong.png" alt="testButton">
+                                </a>
+                                <span class="des">
+                            <p>Pong</p>
+                            <p>Algo Prog</p>
+                            <p>Processing</p>
+                            </span>
+                            </div>
+                            <div class="bt">
+                                <a href="#">
+                                    <img src="IMG/machineVirtuelle.png" alt="testButton">
+                                </a>
+                                <span class="des">
+                            <p>Création machine virtuelle</p>
+                            <p>Système</p>
+                            <p>Linux / Bash</p>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blockDeTrois">
+                        <div class="row-span2">
+                            <div class="bt">
+                                <a href="#">
+                                    <img src="IMG/lowatem.png" alt="testButton">
+                                </a>
+                                <span class="des">
+                        <p>Lowatem</p>
+                        <p>Algo Prog</p>
+                        <p>Java</p>
+                        </span>
+                            </div>
+                            <div class="bt">
+                                <a href="#">
+                                    <img src="IMG/pong.png" alt="testButton">
+                                </a>
+                                <span class="des">
+                            <p>Pong</p>
+                            <p>Algo Prog</p>
+                            <p>Processing</p>
+                            </span>
+                            </div>
+                            <div class="bt">
+                                <a href="#">
+                                    <img src="IMG/machineVirtuelle.png" alt="testButton">
+                                </a>
+                                <span class="des">
+                            <p>Création machine virtuelle</p>
+                            <p>Système</p>
+                            <p>Linux / Bash</p>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <!--Fin d'une année-->
+            </section>
+        </div>
     </div>
 </body>
 

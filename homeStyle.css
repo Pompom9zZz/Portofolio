@@ -1,5 +1,9 @@
 /** Structure de la page**/
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     background-color: rgb(42, 40, 40);
@@ -23,9 +27,11 @@ body {
 }
 
 nav {
+    position: fixed;
     width: fit-content;
     min-height: 100vh;
     background-color: rgb(29, 29, 29);
+    transition: width 0.5s ease-in-out;
 }
 
 header {
@@ -35,17 +41,42 @@ header {
     align-items: center;
 }
 
+section~section {
+    position: relative;
+    top: -15vh
+}
+
+section .blockDeTrois {
+    display: flex;
+    flex-direction: column;
+    border-top: solid 1px white;
+}
+
+section .blockDeTrois~.blockDeTrois {
+    position: relative;
+    top: -10vh;
+    border-top: none;
+}
+
+#trueBody {
+    position: relative;
+    left: calc(1920px - 1811px);
+    width: 1811px;
+}
+
 
 /** autre **/
 
 h1 {
     align-items: center;
-    color: rgb(255, 0, 0);
+    color: white;
+    text-shadow: 0px 3px 2px rgb(255, 0, 0);
 }
 
 h2 {
     align-items: center;
-    color: rgb(0, 102, 255);
+    color: white;
+    text-shadow: 0px 3px 2px blue;
 }
 
 
@@ -58,26 +89,31 @@ h2 {
 }
 
 .des {
-    color: red;
-    width: fit-content;
-    position: relative;
     display: flex;
+    flex-direction: column;
+    color: white;
+    text-shadow: 0px 3px 2px black;
+    width: 100%;
+    position: relative;
     align-items: center;
     top: -25px;
-    transition: 0.5s;
     opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.bt img {
+    transition: 0.5s;
 }
 
 .bt:hover img {
-    margin: 0px;
-    border: 0px;
     filter: blur(8px);
+    transition: filter 0.5s ease-in-out;
 }
 
 .bt:hover .des {
-    transition: 0.5s;
-    transform: translateY(-7vh);
+    transform: translateY(-25vh);
     opacity: 1;
+    transition: all 0.5s ease-in-out;
 }
 
 section img {
@@ -107,25 +143,25 @@ nav .menu-row-span {
 
 nav input[type="checkbox"]:not(:checked)~div ul {
     transform: scaleX(0%);
-    transition: transform 0.5s ease-in-out;
     width: 0;
+    transition: all 0.5s ease-in-out;
 }
 
 nav input[type="checkbox"]:checked~div ul {
     transform: scaleX(100%);
-    transition: transform 0.5s ease-in-out;
     padding-right: 10px;
+    transition: all 0.5s ease-in-out;
 }
 
 nav input[type="checkbox"]:not(:checked)~div h3 {
     transform: scaleX(0);
-    transition: transform 0.5s ease-in-out;
     width: 0;
+    transition: all 0.5s ease-in-out;
 }
 
 nav input[type="checkbox"]:checked~div h3 {
-    transition: 0.5s;
     display: flex;
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -231,17 +267,29 @@ nav input:checked+span::after {
 
 /** Menu **/
 
-nav li {
-    color: white;
-    text-decoration: none;
-}
-
 nav ul {
     list-style: none;
 }
 
+nav li {
+    padding-right: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
 nav li:hover {
     color: rgb(255, 0, 0);
+    padding-right: 0;
+    padding-left: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li:hover a {
+    color: red;
 }
 
 h3 {
