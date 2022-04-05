@@ -2,7 +2,10 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: black;
+}
+
+body {
+    display: flex;
 }
 
 .row-span2 {
@@ -16,34 +19,73 @@ html {
     flex-direction: column;
 }
 
+
+/** #region**/
+
+
+/**Menu style**/
+
 nav {
-    left: 0;
-    top: 0;
+    /* On the top of all things, always visible*/
     position: fixed;
-    min-height: 100vh;
-    background-color: rgba(8, 8, 8, 0.9);
     z-index: 100;
+    min-width: 100%;
+    background-color: rgba(8, 8, 8, 0.9);
 }
 
-#trueBody {
-    position: absolute;
-    right: 0px;
-    flex-grow: 0;
-    margin-right: 0;
-    padding-right: 0;
-    width: 93vw;
+nav .menu-row-span {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    justify-content: space-between;
 }
+
+nav .menu,
+nav .contact {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+nav .menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav .contact ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: flex;
+    list-style: none;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    color: red;
+    text-decoration: none;
+}
+
+
+/** #endregion**/
 
 header {
+    padding-top: 5vh;
     display: flex;
     flex-direction: column;
     min-width: 85vw;
     align-items: center;
 }
 
-section~section {
-    position: relative;
-    top: -15vh
+section {
+    padding-top: 5vh;
 }
 
 section .blockDeTrois {
@@ -89,8 +131,7 @@ h3 {
     font-style: bold;
     font-family: 'comfortaaregular';
     color: white;
-    transform: translateX(1vw);
-    transition: transform 0.5s ease-in-out;
+    align-items: center;
 }
 
 
@@ -142,173 +183,4 @@ section img {
 
 .bt p {
     padding-left: 10px;
-}
-
-
-/** Bouton pour afficher le menu **/
-
-
-nav .menu-col-span {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 0;
-}
-
-nav .menu-row-span {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-grow: 0;
-}
-
-nav input[type="checkbox"]:not(:checked)~div ul {
-    transform: scaleX(0%);
-    width: 0;
-    transition: all 0.5s ease-in-out;
-}
-
-nav input[type="checkbox"]:checked~div ul {
-    transform: scaleX(100%);
-    padding-right: 10px;
-    transition: all 0.5s ease-in-out;
-}
-
-nav input[type="checkbox"]:not(:checked)~div h3 {
-    transform: scaleX(0);
-    width: 0;
-    transition: all 0.5s ease-in-out;
-}
-
-nav input[type="checkbox"]:checked~div h3 {
-    display: flex;
-    transition: all 0.5s ease-in-out;
-}
-
-
-/** bouton anime **/
-
-nav .menuBt {
-    background-color: transparent;
-}
-
-nav input {
-    cursor: pointer;
-}
-
-nav input:checked {
-    z-index: 1;
-    flex-shrink: 0;
-    flex-grow: 0;
-    position: relative;
-    top: 15px;
-    appearance: none;
-    background-color: transparent;
-    color: transparent;
-    width: 20px;
-    height: 20px;
-    right: 25px
-}
-
-nav input:not(:checked) {
-    z-index: 1;
-    position: relative;
-    top: 15px;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    color: transparent;
-}
-
-nav input:not(:checked)+span {
-    z-index: 0;
-    content: none;
-    position: relative;
-    width: 20px;
-    height: 4px;
-    background-color: white;
-    top: 25px;
-    left: 0px;
-    transition: background-color 0.5s ease-in-out;
-}
-
-nav input:checked+span {
-    z-index: 0;
-    content: none;
-    position: relative;
-    width: 20px;
-    height: 4px;
-    background-color: transparent;
-    top: 25px;
-    transition: background-color 0.5s ease-in-out;
-}
-
-nav input+span::before,
-nav input+span::after {
-    z-index: 0;
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 4px;
-    background-color: white;
-}
-
-nav input:not(:checked)+span::before {
-    transform: translateY(-8px);
-    transition: transform 0.5s ease-in-out;
-}
-
-nav input:not(:checked)+span::after {
-    transform: translateY(8px);
-    transition: transform 0.5s ease-in-out;
-}
-
-nav input:not(:checked)+span {
-    z-index: 0;
-    content: none;
-    position: relative;
-    width: 20px;
-    height: 4px;
-    background-color: white;
-    top: 25px;
-    left: 24px;
-}
-
-nav input:checked+span::before {
-    transform: translateY(0px) rotateZ(45deg);
-    transition: transform 0.5s ease-in-out;
-}
-
-nav input:checked+span::after {
-    transform: translateY(0px) rotateZ(-45deg);
-    transition: transform 0.5s ease-in-out;
-}
-
-
-/** Menu **/
-
-nav ul {
-    list-style: none;
-}
-
-nav li {
-    font-family: 'comfortaaregular';
-    padding-right: 1vw;
-    transition: all 0.5s ease-in-out;
-}
-
-nav li:hover {
-    color: rgb(255, 0, 0);
-    font-family: 'comfortaaregular';
-    padding-right: 0;
-    padding-left: 1vw;
-    transition: all 0.5s ease-in-out;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li:hover a {
-    color: red;
 }

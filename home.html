@@ -4,249 +4,215 @@
 <head>
     <meta charset="UTF-8">
     <link href="./homeStyle.css" rel="stylesheet">
+    <script language="javascript" type="text/javascript" src="menu.js"></script>
     <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
-    <script language="javascript" type="text/javascript" src="sketch.js"></script>
     <script language="javascript" type="text/javascript" src="part.js"></script>
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
     <title>Home</title>
-    <style> 
+    <style>
         canvas {
-        position:fixed;
-        top: 0px;
-        margin-top: 0px;
-        z-index:-1;}
+            position: fixed !important;
+            top: 0px;
+            left: 0;
+            margin-top: 0px;
+            z-index: -100;
+        }
     </style>
 </head>
 
-<body>
-    <div class="col-span">
-        <!-- Menu sur le coté-->
-        <nav id="menu">
-            <div class="menuBt">
-                <form>
-                    <div class="menu-row-span">
-                        <input type="checkbox" value="checked">
-                        <span></span>
-                        <div class="icon-col-span">
-                            <h3>Menu</h3>
-                            <ul>
-                                <li>
-                                    <a href="#annee1">
-                                    Java projects
-                                </a>
-                                </li>
-                                <li>
-                                    <br>
-                                </li>
-                                <li>
-                                    <a href="#annee2">
-                                    Web projects
-                                </a>
-                                </li>
-                                <li>
-                                    <br>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    Python projects
-                                </a>
-                                </li>
-                                <li>
-                                    <br>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    Linux projects
-                                </a>
-                                </li>
-                                <li>
-                                    <br>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    SQL projects
-                                </a>
-                                </li>
-                                <li>
-                                    <br>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </form>
+<body onresize="setup()" onscroll="scrollTest()">
+
+    <!-- Menu en haut-->
+    <nav>
+        <div class="menu-row-span">
+            <div class="menu">
+                <ul>
+                    <li><a href="#java" class="active">Java</a></li>
+                    <li><a href="#web">Web</a></li>
+                    <li><a href="#">Linux OS</a></li>
+                    <li><a href="#">Robotics</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
             </div>
-        </nav>
+            <div class="contact">
+                <ul>
+                    <li><a href="#">G</a></li>
+                    <li><a href="#">L</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="col-span">
         <!-- En tete-->
-        <section id="trueBody">
-            <header>
-                <h1>My works</h1>
-                <h3>By Tom Fourcaudot</h3>
-            </header>
-            <!--Corps de la page-->
-            <!-- Une année-->
-            <section id="annee1">
-                <div class="sectionTitle">
-                    <h1>Java projects</h1>
-                </div>
-                <div class="blockDeTrois">
-                    <div class="row-span2">
-                        <div class="bt">
-                            <a href="#">
-                                <img src="IMG/lowatem.png" alt="testButton">
+        <header>
+            <h1>My works</h1>
+            <h3>By Tom Fourcaudot</h3>
+        </header>
+        <!--Corps de la page-->
+        <!-- Une année-->
+        <section id="java">
+            <div class="sectionTitle">
+                <h1>Java projects</h1>
+            </div>
+            <div class="blockDeTrois">
+                <div class="row-span2">
+                    <div class="bt">
+                        <a href="#">
+                            <img src="IMG/lowatem.png" alt="testButton">
 
-                                <span class="des">
+                            <span class="des">
                         <p>Lowatem</p>
                         <p>Algo Prog</p>
                         <p>Java</p>
                         </span>
-                            </a>
-                        </div>
-                        <div class="bt">
-                            <a href="#">
-                                <img src="IMG/pong.png" alt="testButton">
+                        </a>
+                    </div>
+                    <div class="bt">
+                        <a href="#">
+                            <img src="IMG/pong.png" alt="testButton">
 
-                                <span class="des">
+                            <span class="des">
                             <p>Pong</p>
                             <p>Algo Prog</p>
                             <p>Processing</p>
                             </span>
-                            </a>
-                        </div>
-                        <div class="bt">
-                            <a href="#">
-                                <img src="IMG/machineVirtuelle.png" alt="testButton">
+                        </a>
+                    </div>
+                    <div class="bt">
+                        <a href="#">
+                            <img src="IMG/machineVirtuelle.png" alt="testButton">
 
-                                <span class="des">
+                            <span class="des">
                             <p>Création machine virtuelle</p>
                             <p>Système</p>
                             <p>Linux / Bash</p>
                             </span>
-                            </a>
-                        </div>
+                        </a>
                     </div>
                 </div>
-                <div class="blockDeTrois">
-                    <div class="row-span2">
-                        <div class="bt">
-                            <a href="#">
-                                <img src="IMG/lowatem.png" alt="testButton">
+            </div>
+            <div class="blockDeTrois">
+                <div class="row-span2">
+                    <div class="bt">
+                        <a href="#">
+                            <img src="IMG/lowatem.png" alt="testButton">
 
-                                <span class="des">
+                            <span class="des">
                         <p>Lowatem</p>
                         <p>Algo Prog</p>
                         <p>Java</p>
                         </span>
-                            </a>
-                        </div>
-                        <div class="bt">
-                            <a href="#">
-                                <img src="IMG/pong.png" alt="testButton">
+                        </a>
+                    </div>
+                    <div class="bt">
+                        <a href="#">
+                            <img src="IMG/pong.png" alt="testButton">
 
-                                <span class="des">
+                            <span class="des">
                             <p>Pong</p>
                             <p>Algo Prog</p>
                             <p>Processing</p>
                             </span>
-                            </a>
-                        </div>
-                        <div class="bt">
-                            <a href="#">
-                                <img src="IMG/machineVirtuelle.png" alt="testButton">
+                        </a>
+                    </div>
+                    <div class="bt">
+                        <a href="#">
+                            <img src="IMG/machineVirtuelle.png" alt="testButton">
 
-                                <span class="des">
+                            <span class="des">
                             <p>Création machine virtuelle</p>
                             <p>Système</p>
                             <p>Linux / Bash</p>
                             </span>
-                            </a>
-                        </div>
+                        </a>
                     </div>
                 </div>
+            </div>
 
-            </section>
-            <!--Fin d'une année-->
-            <!-- Une année-->
-            <section id="annee2">
-                <div class="sectionTitle">
-                    <h1>WEB projects</h1>
-                </div>
-                <div class="blockDeTrois">
-                    <div class="row-span2">
-                        <div class="bt">
-                            <a href="#">
-                                <img src="IMG/lowatem.png" alt="testButton">
-
-                                <span class="des">
-                        <p>Lowatem</p>
-                        <p>Algo Prog</p>
-                        <p>Java</p>
-                        </span>
-                            </a>
-                        </div>
-                        <div class="bt">
-                            <a href="#">
-                                <img src="IMG/pong.png" alt="testButton">
-
-                                <span class="des">
-                            <p>Pong</p>
-                            <p>Algo Prog</p>
-                            <p>Processing</p>
-                            </span>
-                            </a>
-                        </div>
-                        <div class="bt">
-                            <a href="#">
-                                <img src="IMG/machineVirtuelle.png" alt="testButton">
-
-                                <span class="des">
-                            <p>Création machine virtuelle</p>
-                            <p>Système</p>
-                            <p>Linux / Bash</p>
-                            </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="blockDeTrois">
-                    <div class="row-span2">
-                        <div class="bt">
-                            <a href="#">
-                                <img src="IMG/lowatem.png" alt="testButton">
-
-                                <span class="des">
-                        <p>Lowatem</p>
-                        <p>Algo Prog</p>
-                        <p>Java</p>
-                        </span>
-                            </a>
-                        </div>
-                        <div class="bt">
-                            <a href="#">
-                                <img src="IMG/pong.png" alt="testButton">
-
-                                <span class="des">
-                            <p>Pong</p>
-                            <p>Algo Prog</p>
-                            <p>Processing</p>
-                            </span>
-                            </a>
-                        </div>
-                        <div class="bt">
-                            <a href="#">
-                                <img src="IMG/machineVirtuelle.png" alt="testButton">
-
-                                <span class="des">
-                            <p>Création machine virtuelle</p>
-                            <p>Système</p>
-                            <p>Linux / Bash</p>
-                            </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-            <!--Fin d'une année-->
         </section>
+        <!--Fin d'une année-->
+        <!-- Une année-->
+        <section id="web">
+            <div class="sectionTitle">
+                <h1>WEB projects</h1>
+            </div>
+            <div class="blockDeTrois">
+                <div class="row-span2">
+                    <div class="bt">
+                        <a href="#">
+                            <img src="IMG/lowatem.png" alt="testButton">
+
+                            <span class="des">
+                        <p>Lowatem</p>
+                        <p>Algo Prog</p>
+                        <p>Java</p>
+                        </span>
+                        </a>
+                    </div>
+                    <div class="bt">
+                        <a href="#">
+                            <img src="IMG/pong.png" alt="testButton">
+
+                            <span class="des">
+                            <p>Pong</p>
+                            <p>Algo Prog</p>
+                            <p>Processing</p>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="bt">
+                        <a href="#">
+                            <img src="IMG/machineVirtuelle.png" alt="testButton">
+
+                            <span class="des">
+                            <p>Création machine virtuelle</p>
+                            <p>Système</p>
+                            <p>Linux / Bash</p>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="blockDeTrois">
+                <div class="row-span2">
+                    <div class="bt">
+                        <a href="#">
+                            <img src="IMG/lowatem.png" alt="testButton">
+
+                            <span class="des">
+                        <p>Lowatem</p>
+                        <p>Algo Prog</p>
+                        <p>Java</p>
+                        </span>
+                        </a>
+                    </div>
+                    <div class="bt">
+                        <a href="#">
+                            <img src="IMG/pong.png" alt="testButton">
+
+                            <span class="des">
+                            <p>Pong</p>
+                            <p>Algo Prog</p>
+                            <p>Processing</p>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="bt">
+                        <a href="#">
+                            <img src="IMG/machineVirtuelle.png" alt="testButton">
+
+                            <span class="des">
+                            <p>Création machine virtuelle</p>
+                            <p>Système</p>
+                            <p>Linux / Bash</p>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--Fin d'une année-->
     </div>
 </body>
 
