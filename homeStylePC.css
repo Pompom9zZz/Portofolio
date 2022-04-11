@@ -1,5 +1,3 @@
-/** Structure de la page**/
-
 html {
     scroll-behavior: smooth;
 }
@@ -7,6 +5,31 @@ html {
 body {
     display: flex;
 }
+
+@font-face {
+    font-family: 'comfortaaregular';
+    src: url('FONT/webfontkit-20220318-060356/comfortaa-regular-webfont.woff2') format('woff2'), url('FONT/webfontkit-20220318-060356/comfortaa-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav {
+    /* On the top of all things, always visible*/
+    position: fixed;
+    z-index: 100;
+    min-width: 100%;
+    background-color: rgba(39, 39, 39, 0.9);
+}
+
+
+@media screen and (min-width: 767px) {
+    
+
+
+/** Structure de la page**/
+
+
+
 
 .row-span2 {
     display: flex;
@@ -26,12 +49,7 @@ body {
     align-items: center;
 }
 
-@font-face {
-    font-family: 'comfortaaregular';
-    src: url('FONT/webfontkit-20220318-060356/comfortaa-regular-webfont.woff2') format('woff2'), url('FONT/webfontkit-20220318-060356/comfortaa-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 
 /** #region**/
@@ -40,12 +58,7 @@ body {
 /**Menu style**/
 
 nav {
-    /* On the top of all things, always visible*/
-    position: fixed;
-    z-index: 100;
-    min-width: 100%;
     max-height: 6vh;
-    background-color: rgba(39, 39, 39, 0.9);
 }
 
 nav .menu-row-span {
@@ -252,4 +265,6 @@ footer {
 
 footer h3 {
     font-size: 1em;
+}
+
 }
