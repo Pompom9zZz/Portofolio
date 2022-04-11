@@ -20,24 +20,27 @@
     </style>
 </head>
 
-<body onresize="setup()" onscroll="scrollTest()">
+<body onresize="setup()" onscroll="updateMenu()">
 
     <!-- Menu en haut-->
     <nav>
         <div class="menu-row-span">
             <div class="menu">
                 <ul>
+                    <li><a href="#about">About me</a></li>
                     <li><a href="#java" class="active">Java</a></li>
                     <li><a href="#web">Web</a></li>
                     <li><a href="#">Linux OS</a></li>
                     <li><a href="#">Robotics</a></li>
                     <li><a href="#">Other</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="contact">
                 <ul>
-                    <li><a href="#">G</a></li>
-                    <li><a href="#">L</a></li>
+                    <li>
+                        <a href="https://github.com/Pompom9zZz"><img src="IMG/github.png" /> </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -50,6 +53,22 @@
         </header>
         <!--Corps de la page-->
         <!-- Une année-->
+        <section id="about">
+            <h1>Tom FOURCAUDOT</h1>
+            <h3 id="aboutTitle">An internationnal develloper</h3>
+            <div class="row-span">
+                <img src="IMG/pdpPortofolio.jpg" alt="Tom" />
+                <div class="col-span">
+                    <h3>
+                        A french develloper who loves to code multiples things. Curenntly studying at the university of Bordeaux.<br> I'm actually coding whith multiples langages likes Java, Python, SQL, HTML, CSS, Javascript, Bash.<br> I also like making
+                        some robot, so i learn the C programming language to make robots with arduino card<br> so I use python to make robots with a raspberry pi.
+                    </h3>
+                    <h3>
+                        In my free time, I play drums and I learn forgein langages. I improve my English and I'm actually learning Japanese.<br> I learn all
+                    </h3>
+                </div>
+            </div>
+        </section>
         <section id="java">
             <div class="sectionTitle">
                 <h1>Java projects</h1>
@@ -213,6 +232,19 @@
 
         </section>
         <!--Fin d'une année-->
+        <section id="contact">
+            <h1>Contact</h1>
+            <h3>
+                <a href="mailto: tom.fourcaudot@gmail.com"><img src="IMG/mail.png" />tom.fourcaudot@gmail.com</a>
+            </h3>
+            <h3>
+                <a href="https://github.com/Pompom9zZz"><img src="IMG/github.png" />github</a>
+            </h3>
+        </section>
+        <footer>
+            <h3>© Tom FOURCAUDOT</h3>
+            <h3>All rights reserved</h3>
+        </footer>
     </div>
 </body>
 

@@ -1,17 +1,17 @@
-function scrollTest() {
-    var item1 = getOffset(document.getElementsByTagName("section")[0]).top;
-    console.log(item1);
-    var item2 = document.getElementsByTagName("li")[1];
-    var item3 = document.getElementsByTagName("li")[2];
-    var item4 = document.getElementsByTagName("li")[3];
-    var item5 = document.getElementsByTagName("li")[4];
-
-};
-
-function getOffset(el) {
-    const rect = el.getBoundingClientRect();
-    return {
-        left: rect.left + window.scrollX,
-        top: rect.top + window.scrollY
-    };
+function updateMenu() {
+    const sectionAll = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset;
+        sectionAll.forEach((current) => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - (document.querySelector('header').offsetHeight / 2);
+            const sectionId = current.getAttribute('id');
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                document.querySelector('nav ul li a[href="#' + sectionId + '"]').classList.add('active');
+                console.log(sectionId);
+            } else {
+                document.querySelector('nav ul li a[href="#' + sectionId + '"]').classList.remove('active');
+            }
+        });
+    });
 }
