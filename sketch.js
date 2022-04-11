@@ -17,6 +17,7 @@ function setup() {
         root.push(new Part());
     }
     background(0, 0, 0);
+    console.log(window.innerWidth)
 }
 
 function draw() {
