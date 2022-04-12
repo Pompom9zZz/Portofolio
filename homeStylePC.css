@@ -241,6 +241,7 @@ nav ul li {
         align-items: center;
         justify-content: center;
     }
+
     nav .menu-row-span {
         display: flex;
         flex-direction: row;
@@ -254,7 +255,8 @@ nav ul li {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        margin: 0px;
     }
     nav .menu ul li {
         margin: 0.5em;
