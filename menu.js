@@ -15,3 +15,8 @@ function updateMenu() {
         });
     });
 }
+
+function loadRetex(img, title) {
+    var opened = window.open("");
+    opened.document.write("<!DOCTYPE html><html><head> <link href='./Retex.css' rel='stylesheet'><title>RETEX</title></head><body><h1>" + title + "</h1><iframe src='" + img + "'type='application/pdf'/></body></html>");
+}
