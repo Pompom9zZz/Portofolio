@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+iframe {
+    width: 100vw;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'comfortaaregular';
+    src: url('FONT/webfontkit-20220318-060356/comfortaa-regular-webfont.woff2') format('woff2'), url('FONT/webfontkit-20220318-060356/comfortaa-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: comfortaaregular;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+}
