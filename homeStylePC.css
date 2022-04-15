@@ -69,6 +69,10 @@ header {
     align-items: center;
 }
 
+.bt a figure {
+    cursor: pointer;
+}
+
 
 /** autre **/
 
